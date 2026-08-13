@@ -1,0 +1,77 @@
+{
+  "name": "Train",
+  "type": "object",
+  "properties": {
+    "line_name": {
+      "type": "string",
+      "description": "Nazwa/linia poci\u0105gu"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "IC",
+        "TLK",
+        "EIC",
+        "EIP",
+        "R",
+        "Os",
+        "IR",
+        "KM",
+        "SKM",
+        "KM\u0141",
+        "KS",
+        "KW",
+        "RE",
+        "S"
+      ],
+      "description": "Kategoria poci\u0105gu"
+    },
+    "carrier": {
+      "type": "string",
+      "enum": [
+        "PKP IC",
+        "PR",
+        "KM",
+        "KM\u0141",
+        "SKM",
+        "KD",
+        "K\u015a",
+        "KW",
+        "\u0141KA",
+        "SKMT",
+        "Arriva",
+        "Leo Express",
+        "RegioJet"
+      ],
+      "description": "Przewo\u017anik"
+    },
+    "departure_time": {
+      "type": "string",
+      "description": "Czas odjazdu (HH:mm) \u2014 powtarza si\u0119 codziennie"
+    },
+    "arrival_time": {
+      "type": "string",
+      "description": "Czas przyjazdu (HH:mm) \u2014 powtarza si\u0119 codziennie"
+    },
+    "origin_station": {
+      "type": "string",
+      "description": "Stacja pocz\u0105tkowa (ID)"
+    },
+    "destination_station": {
+      "type": "string",
+      "description": "Stacja ko\u0144cowa (ID)"
+    },
+    "delay_minutes": {
+      "type": "number",
+      "description": "Nadpisane op\u00f3\u017anienie w minutach (opcjonalne)"
+    }
+  },
+  "required": [
+    "category",
+    "carrier",
+    "departure_time",
+    "arrival_time",
+    "origin_station",
+    "destination_station"
+  ]
+}
