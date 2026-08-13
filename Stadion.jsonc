@@ -1,0 +1,13 @@
+{
+  "name": "Station",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nazwa stacji PKP"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
